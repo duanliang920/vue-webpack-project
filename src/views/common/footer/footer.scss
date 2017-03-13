@@ -1,0 +1,19 @@
+@charset 'utf-8';
+
+/*
+*  description: 底部样式 
+*  author: duanliang
+*  update-time: 2017-3-12
+*/
+
+$backgroundColor: #333;
+.footer-wrap-box {
+    width: 1200px;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+    text-align: center;
+    background-color: $backgroundColor;
+}
