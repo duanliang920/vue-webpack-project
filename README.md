@@ -15,7 +15,7 @@
    http://localhost:8188/
    
 效果如下：<br>
-   ![Image text](https://github.com/duanliang920/vue-webpack-project/blob/master/dev.jpg)
+   ![Image text](https://github.com/duanliang920/vue-webpack-project/blob/master/dev.gif)
 
 ##4、编译打包
 `npm run build`
