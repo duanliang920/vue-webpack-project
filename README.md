@@ -4,10 +4,10 @@
 
 # 二、项目安装
 ***
-##1、安装所需要的包
+## 1、安装所需要的包
 `npm install`
 
-##2、运行指令
+## 2、运行指令
 `npm run dev`
 
 ## 3、预览效果
@@ -17,7 +17,7 @@
 效果如下：<br>
    ![Image text](https://github.com/duanliang920/vue-webpack-project/blob/master/dev.gif)
 
-##4、编译打包
+## 4、编译打包
 `npm run build`
    
 
