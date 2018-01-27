@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import Axios from 'axios';
 
 let _options = (options) => {
@@ -8,7 +7,7 @@ let _options = (options) => {
 let _request = (method, url, data, options) => {
     let reqestOptions = {
         method: method,
-        body: data,
+        data: data,
         url: url,
         timeout: 3000
     }
@@ -46,5 +45,11 @@ export const ajax = {
     },
     post(url, data, options) {
         return _request('post', url, data, _options(options))
+    },
+    patch(url, data, options) {
+        return _request('PATCH', url, data, _options(options))
+    },
+    put(url, data, options) {
+        return _request('put', url, data, _options(options))
     }
 }

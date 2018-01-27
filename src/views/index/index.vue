@@ -1,67 +1,67 @@
 <template>
-    <div class="index-content-box">
-        我是首页内容<br/><br/><br/>
-        <router-link :to="{ path: '/list' }">
-          点击去list页
-        </router-link><br/><br/>
-        <router-link :to="{ path: '/detail/23' }">
-          点击去详情页
-        </router-link><br/><br/>
-        <router-link :to="{ path: '/about' }">
-          点击关于我们
-        </router-link>
+    <div class="index-box">
+        这是首页311123<br/>
+        <img src="../../assets/images/test1.png"/><br/>
+        <div class="test flex">test测试</div><br/>
     </div>
+
 </template>
 
 <script>
-import {ajax} from '../../services/ajax'
-export default {
-  props: {
-    
-  },
-  data () {
-    return {
-        dataList: []
-    }
-  },
-  computed: { 
-    
-  },
-  watch: {
-    
-  },
-  methods: {
-    getTestData () {
-        /*
-         *  ajax Example
-         *  1、ajax 一个是基于promise库。下面的调用方法，
-         *  是我对它（axios）进行了一次封装。
-         *  2、具体 请到 services 目录下查看源码
-         *  3、暂时只对外提供 get post。 如需其它请求，请自行添加！
-         *  注：这个ajax库不是项目必须的。可根据您的喜好自行选择，
-         *      这里只是提供了一个演示方式。
-        */
-        let url ="http://www.duanliang920.com"
-        ajax.get(url, (res)=>{
+    import { ajax } from '@services/ajax'
+    import { commonApi } from '@services/api'
+    export default {
+        props: {
+           
+        },
+        data () {
+            return {
+                
+            };
+        },
 
-            console.log('res:', res)
-           // this.dataList = res.data
-        })
-        .catch(err => {
-            console.log('ajax error', err);
-        });
-    }
-  },
-  mounted () {
-    this.getTestData()
-  }
-}
+        computed: {
+           
+        },
+
+        watch: {
+            
+        },
+
+        methods: {
+            getData () {
+                let url = commonApi.index
+                ajax.get(url)
+                    .then((res) => {
+                        console.log('res:', res)
+                    })
+                    .catch((error) => {
+                        console.log('error:', error)
+                    })
+            },
+            postData () {
+                let url = commonApi.index
+                let _data = {
+                    test: 1
+                }
+                let _headers = {
+                    "X-Requested-With": "XMLHttpRequest"
+                }
+                ajax.post(url, _data, _headers)
+                    .then((res) => {
+                        console.log('res:', res)
+                    })
+                    .catch((error) => {
+                        console.log('error:', error)
+                    })
+            }
+        },
+
+        mounted() {
+            // this.getData()
+        }
+    };
 </script>
 <style lang="sass" scoped>
-    .index-content-box {
-        width:600px;
-        margin:50px auto;
-        font-size:16px;
-        color:#f34;
-    }
+    @import './index.scss'
 </style>

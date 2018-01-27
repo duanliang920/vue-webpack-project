@@ -3,54 +3,53 @@
 /*
 *  description: 全局样式 
 *  author: duanliang
-*  update-time: 2017-3-12
+*  update-time: 2017-06-17
 */
 
 
 /*reset start*/
 
-$width: 1200px;
-$auto: 0 auto;
-a,
-address,
-b,
-big,
-blockquote,
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
 body,
-center,
-cite,
-code,
-dd,
-del,
 div,
 dl,
 dt,
-em,
-fieldset,
-form,
+dd,
+ul,
+ol,
+li,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6,
-html,
-i,
-iframe,
-img,
-label,
-legend,
-li,
-ol,
+form,
+fieldset,
+input,
+textarea,
 p,
-pre,
-small,
-span,
-strong,
-u,
-ul {
+th,
+td,
+hr,
+button,
+footer,
+header,
+menu,
+nav,
+section {
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Microsoft Yahei';
 }
 
 em {
@@ -67,11 +66,76 @@ a {
 }
 
 img {
+    width: 100%;
     border: none;
+    vertical-align: top;
 }
 
 table {
     border-collapse: collapse;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
 }
 
 input,
@@ -82,17 +146,6 @@ textarea {
 textarea {
     resize: none;
     overflow: auto;
-}
-
-html,
-body {
-    width: 100%;
-    height: 100%;
-}
-
-body {
-    font-size: 14px;
-    font-family: "Microsoft YaHei", Arial, sans-serif;
 }
 
 .fl {
@@ -111,6 +164,18 @@ body {
     content: '';
     display: block;
     clear: both;
+}
+
+.color-333 {
+    color: #333;
+}
+
+.color-666 {
+    color: #666;
+}
+
+.color-999 {
+    color: #999;
 }
 
 
